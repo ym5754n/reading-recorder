@@ -1,0 +1,20 @@
+services:
+  app:
+    container_name: reading_recorder_app
+    image: reading_recorder_app
+    build:
+      context: ./app/
+    ports:
+      - "3000:3000"
+      - "5555:5555"
+    volumes:
+      - .:/reading-recorder
+      - node_modules:/reading-recorder/node_modules
+    tty: true
+    command: sh -c "cd app; npm run dev"
+    networks:
+      - default
+    environment:
+      - WATCHPACK_POLLING=true
+volumes:
+  node_modules:
