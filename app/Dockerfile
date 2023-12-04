@@ -1,4 +1,4 @@
-FROM node:18.12-alpine
+FROM node:lts-alpine
 
 WORKDIR /reading-recorder/app
 

@@ -11,7 +11,7 @@ services:
       - .:/reading-recorder
       - node_modules:/reading-recorder/node_modules
     tty: true
-    command: sh -c "cd app; npm run dev"
+    # command: sh -c "cd app; npm run dev"
     networks:
       - default
     environment:
