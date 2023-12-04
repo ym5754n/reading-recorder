@@ -1,6 +1,12 @@
 import Image from 'next/image';
+import { Book } from '@/types/Book';
 
-export default function BookDetails({ index, book }) {
+type BookDetailsProps = {
+    index: number
+    book: Book
+}
+
+export default function BookDetails({ index, book }: BookDetailsProps) {
     return (
         <div className="flex w-full mb-4">
             <div>

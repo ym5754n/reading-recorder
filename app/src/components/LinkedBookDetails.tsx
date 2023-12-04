@@ -1,7 +1,13 @@
 import Link from "next/link";
 import BookDetails from "./BookDetails";
+import { Book } from "@/types/Book";
 
-export default function LinkedBookDetails({ index, book }) {
+type LinkedBookDetailsProps = {
+    index: number
+    book: Book
+};
+
+export default function LinkedBookDetails({ index, book }: LinkedBookDetailsProps) {
     return (
         <Link href={`edit/${book.id}`}>
             <div className="hover:bg-green-50">

@@ -1,4 +1,6 @@
 import prisma from "./prisma";
+import type { FetchedBook } from "@/types/FetchedBook";
+import type { FetchedBooks } from "@/types/FetchedBooks";
 
 export async function getAllReviews() {
     return await prisma.reviews.findMany({
@@ -8,7 +10,7 @@ export async function getAllReviews() {
     });
 };
 
-export function createBook(book) {
+export function createBook(book: FetchedBook) {
     const authors = book.volumeInfo.authors;
     const price = book.saleInfo.listPrice;
     const img = book.volumeInfo.imageLinks;
@@ -25,7 +27,7 @@ export function createBook(book) {
 
 export async function getBooksByKeyword(keyword: string) {
     const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${keyword}&langRestrict=ja&maxResults=20&printType=books`);
-    const result = await res.json();
+    const result = await res.json() as FetchedBooks;
     const books = [];
     for (const b of result.items) {
         books.push(createBook(b));
