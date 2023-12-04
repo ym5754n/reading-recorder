@@ -17,7 +17,7 @@ export default function BooksLayout({ children }: { children: React.ReactNode })
             <input 
                 type="text"
                 ref={txtKeyword}
-                className="bg-gray-100 text-blank border border-gray-600 rounded mr-2 px-2 py-2 focus:bg-white focus:outline-none focus: border-red-500" />
+                className="bg-gray-100 text-blank border border-gray-600 rounded mr-2 px-2 py-2 focus:bg-white focus:outline-none focus:border-red-500" />
             <button
                 type="button"
                 onClick={handleSearch}
