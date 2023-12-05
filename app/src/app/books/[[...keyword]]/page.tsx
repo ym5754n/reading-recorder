@@ -6,9 +6,9 @@ export default async function BookResult({ params: { keyword = 'React' } }) {
 
     return (
         <>
-            {books.map((b,i) => (
-                <LinkedBookDetails book={b} index={i + 1} key={b.id} />
-            ))}
+        {books.map((b,i) => (
+            <LinkedBookDetails book={b} index={i + 1} key={b.id} />
+        ))}
         </>
     );
 }

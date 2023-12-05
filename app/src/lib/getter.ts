@@ -34,3 +34,17 @@ export async function getBooksByKeyword(keyword: string) {
     }
     return books;
 }
+
+export async function getBookById(id: string) {
+    const res = await fetch(`https://www.googleapis.com/books/v1/volumes/${id}`);
+    const result = await res.json() as FetchedBook;
+    return createBook(result);
+}
+
+export async function getReviewById(id: string) {
+    return await prisma.reviews.findUnique({
+        where: {
+            id: id
+        }
+    });
+}

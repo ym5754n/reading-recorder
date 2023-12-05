@@ -9,7 +9,7 @@ type LinkedBookDetailsProps = {
 
 export default function LinkedBookDetails({ index, book }: LinkedBookDetailsProps) {
     return (
-        <Link href={`edit/${book.id}`}>
+        <Link href={`/edit/${book.id}`}>
             <div className="hover:bg-green-50">
                 <BookDetails index={index} book={book} />
             </div>
