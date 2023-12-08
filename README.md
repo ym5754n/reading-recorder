@@ -17,7 +17,7 @@
   - 今後の拡張･保守を考慮してDocker上に環境を構築しています。
 
 - Vercel: サービスはVercel上でホスティングされています。
-  - [こちら](https://ym5754n-reading-recorder-1wtn0u962-ym5754ns-projects.vercel.app/)からアクセスが可能です。
+  - [こちら](https://ym5754n-reading-recorder.vercel.app/)からアクセスが可能です。
   - ※一時的な公開です。公開停止時期は未定ですが突然見れなくなる可能性があります。
 
 ## 今後の課題
