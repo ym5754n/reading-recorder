@@ -10,9 +10,9 @@ export default async function EditPage({ params }: { params: { id: string }}) {
     const read = (review?.read || new Date()).toLocaleDateString('sv-SE');
 
     return (
-        <div id="form">
+        <div id="form" className="grid grid-cols-1 sm:grid-cols-2">
             <BookDetails book={book} />
-            <hr className="my-4" />
+            <hr className="my-4 sm:hidden" />
             <FormEdit src={{ id: book.id, read, memo: review?.memo }} />
         </div>
     );
