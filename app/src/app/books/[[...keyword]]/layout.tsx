@@ -31,7 +31,9 @@ export default function BooksLayout({ children }: { children: React.ReactNode })
             </button>
         </form>
         <hr />
-        {children}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+            {children}
+        </div>
         </>
     );
 }

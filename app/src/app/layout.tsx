@@ -1,10 +1,10 @@
 import Link from "next/link";
 import './globals.css';
-import { Inconsolata } from 'next/font/google';
-import { ftruncate } from "fs";
+import { M_PLUS_1p } from 'next/font/google';
 import React from "react";
+import { BookOpenIcon } from "@heroicons/react/24/outline";
 
-const fnt = Inconsolata({ subsets: ['latin'] });
+const fnt = M_PLUS_1p({ weight: '400', subsets: ['latin'] });
 
 export const metadata = {
   title: 'Reading Recorder',
@@ -15,8 +15,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body className={fnt.className}>
-        <h1 className="text-4xl text-indigo-800 font-bold my-2">
-          Reading Recorder
+        <h1 className="text-4xl text-indigo-800 font-bold m-2 inline-flex items-center">
+        <BookOpenIcon className="w-8 h-8 mr-1" />Reading Recorder
         </h1>
         <ul className="flex bg-blue-600 mb-4 pl-2">
           <li className="block px-4 py-2 my-1 hover:bg-gray-100 rounded">
@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
           </li>
         </ul>
-        <div className="ml-2">
+        <div className="mx-2">
           {children}
         </div>
       </body>
