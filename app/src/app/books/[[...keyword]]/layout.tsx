@@ -26,7 +26,7 @@ export default function BooksLayout({ children }: { children: React.ReactNode })
             <button
                 type="submit"
                 // onClick={handleSearch}
-                className="bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-500">
+                className="bg-blue-600 dark:bg-slate-600 text-white rounded px-4 py-2 hover:bg-blue-500 dark:hover:bg-slate-500">
                     検索
             </button>
         </form>

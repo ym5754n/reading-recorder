@@ -12,7 +12,7 @@ export default async function EditPage({ params }: { params: { id: string }}) {
     return (
         <div id="form">
             <BookDetails book={book} />
-            <hr />
+            <hr className="my-4" />
             <FormEdit src={{ id: book.id, read, memo: review?.memo }} />
         </div>
     );
