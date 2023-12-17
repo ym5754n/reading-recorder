@@ -29,11 +29,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Search
             </Link>
           </li>
-          <li className="block text-blue-300 dark:text-slate-300 px-4 py-2 my-1 hover:bg-gray-100 rounded">
-            <a className="no-underline text-blue-300 dark:text-slate-300" href="http://wings.msn.to/" target="_blank">
-              Support
-            </a>
-          </li>
         </ul>
         <div className="mx-2">
           {children}
